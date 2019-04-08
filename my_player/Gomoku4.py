@@ -70,6 +70,9 @@ class SimulationPlayer(object):
                 
         return self.bestMove
 
+    def get_best(self):
+        return self.bestMove
+
     def _choose_action(self):
         if 0 not in self.count.values():
             temp = dict(zip(self.moves,[self.avg_rewards[i]+np.sqrt(np.log(self.time)/self.count[i])*self.c for i in self.moves]))
