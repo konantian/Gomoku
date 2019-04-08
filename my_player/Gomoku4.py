@@ -54,7 +54,7 @@ class SimulationPlayer(object):
                 self.bestMove = move
 
         #agent step
-        while 1:
+        for i in range(self.numSimulations):
             self.preAction = self._choose_action()
             self.count[self.preAction] +=1
             self.time += 1
